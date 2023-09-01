@@ -1,0 +1,6 @@
+idp_insights.settings_form:
+  title: "IDP Insight Setting"
+  description: "Configure idp_insights."
+  parent: system.admin_config_system
+  route_name: idp_insights.settings_form
+  weight: 10

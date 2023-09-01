@@ -1,0 +1,11 @@
+services:
+  idp_insights.service:
+    class: Drupal\idp_insights\IdpInsightService
+    arguments:
+      [
+        "@system.manager",
+        "@extension.list.module",
+        "@entity_type.manager",
+        "@module_handler",
+        "@config.factory",
+      ]

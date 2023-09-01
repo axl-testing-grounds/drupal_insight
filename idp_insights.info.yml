@@ -1,0 +1,5 @@
+name: Drupal Insight
+type: module
+description: Provide drupal insights
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,0 +1,17 @@
+idp_insights.data:
+  path: "/idp-insights/data/{req_name}"
+  defaults:
+    _title: "Insight Data"
+    _controller: '\Drupal\idp_insights\Controller\IdpInsightsController::buildData'
+  requirements:
+    _permission: "access content"
+  options:
+    no_cache: TRUE
+
+idp_insights.settings_form:
+  path: "/admin/config/system/idp-insights"
+  defaults:
+    _title: "idp_insights settings"
+    _form: 'Drupal\idp_insights\Form\SettingsForm'
+  requirements:
+    _permission: "administer idp_insights configuration"
