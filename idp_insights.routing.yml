@@ -4,7 +4,7 @@ idp_insights.data:
     _title: "Insight Data"
     _controller: '\Drupal\idp_insights\Controller\IdpInsightsController::buildData'
   requirements:
-    _permission: "access content"
+    _access: 'TRUE'
   options:
     no_cache: TRUE
 
