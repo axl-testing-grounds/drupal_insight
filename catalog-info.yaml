@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Drupal Insight Module
+  annotations:
+    github.com/project-slug: axl-testing-grounds/drupal_insight
+spec:
+  type: other
+  lifecycle: unknown
+  owner: platform_engineering
