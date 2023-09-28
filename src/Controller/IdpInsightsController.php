@@ -46,6 +46,18 @@ class IdpInsightsController extends ControllerBase {
   public function buildData($req_name, Request $request) {
     $idpToken = $request->headers->get('idp-token');
     $methodName = 'get' . $req_name;
+
+    // If status check.
+    if ($req_name == 'setupcheck') {
+      $result = [
+        'status' => $this->idpService->checkIfValidRequest($idpToken),
+      ];
+      if (!$result['status']) {
+        $result['token'] = $idpToken;
+      }
+      return new JsonResponse($result, 200);
+    }
+
     $statusCode = 500;
     if ($this->idpService->checkIfValidRequest($idpToken) && method_exists($this->idpService, $methodName)) {
       $result = call_user_func([$this->idpService, $methodName]);
