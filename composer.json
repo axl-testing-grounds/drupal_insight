@@ -1,0 +1,13 @@
+{
+    "name": "axelerant/drupal-insight-backstage",
+    "description": "A module to provide info to backstage.io",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "zeshanziya",
+            "email": "zeshan.ziya@axelerant.com"
+        }
+    ],
+    "require": {}
+}
